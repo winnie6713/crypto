@@ -1,7 +1,7 @@
 {
   "panel": "带血筹码监测面板",
-  "updated_at": "2026-09-16T15:33:00+07:00",
-  "updated_at_label": "2026-09-16 15:33 ICT (UTC+7) / 08:33 UTC",
+  "updated_at": "2026-09-16T20:11+07:00",
+  "updated_at_label": "2026-09-16 20:11 ICT (UTC+7) / 13:11 UTC",
   "disclaimer": "研究提醒非投资建议",
   "fear_greed": {
     "value": 51,
@@ -15,7 +15,7 @@
     "重点研究": 1,
     "观察": 2,
     "正常": 2,
-    "打折": 1
+    "打折": 3
   },
   "assets": [
     {
@@ -23,51 +23,53 @@
       "name_zh": "比特币",
       "ticker": "BTC",
       "type": "crypto",
-      "price": 75431,
-      "price_display": "$75,431",
-      "change_pct": -1.85,
+      "price": 75733,
+      "change_pct": -1.67,
       "change_window": "24h",
-      "drawdown_pct": -7.18,
+      "drawdown_pct": -7.36,
       "drawdown_basis": "≈30d high",
-      "high_ref": 81265,
+      "high_ref": 81731,
+      "source": "CoinGecko",
+      "gaps": [],
       "status": "正常",
       "note": "距30日高约-7%，回撤温和；恐贪中性。",
-      "source": "CoinGecko",
-      "gaps": []
+      "price_display": "$75,733"
     },
     {
       "id": "ETH",
       "name_zh": "以太坊",
       "ticker": "ETH",
       "type": "crypto",
-      "price": 2388.05,
-      "price_display": "$2,388",
-      "change_pct": -3.39,
+      "price": 2399.1,
+      "change_pct": -3.31,
       "change_window": "24h",
-      "drawdown_pct": -5.43,
+      "drawdown_pct": -10.05,
       "drawdown_basis": "≈30d high",
-      "high_ref": 2525.27,
+      "high_ref": 2663.05,
+      "source": "CoinGecko price/24h; Yahoo 30d high (ETH-USD)",
+      "gaps": [
+        "30d高取自 Yahoo ETH-USD（CoinGecko 限流）"
+      ],
       "status": "观察",
-      "note": "24h跌超3%，短线承压，列入观察。",
-      "source": "CoinGecko",
-      "gaps": []
+      "note": "24h跌超3%且距30日高约-10%，短线承压，列入观察。",
+      "price_display": "$2,399"
     },
     {
       "id": "HYPE",
       "name_zh": "Hyperliquid",
       "ticker": "HYPE",
       "type": "crypto",
-      "price": 77.19,
-      "price_display": "$77.19",
-      "change_pct": -1.89,
+      "price": 78.1,
+      "change_pct": -1.93,
       "change_window": "24h",
-      "drawdown_pct": -12.21,
+      "drawdown_pct": -12.8,
       "drawdown_basis": "≈30d high",
-      "high_ref": 87.95,
-      "status": "观察",
-      "note": "距30日高约-12%，折扣加深，需跟踪。",
+      "high_ref": 89.42,
       "source": "CoinGecko",
-      "gaps": []
+      "gaps": [],
+      "status": "观察",
+      "note": "距30日高约-13%，折扣仍在，需跟踪。",
+      "price_display": "$78.10"
     },
     {
       "id": "CIRCLE",
@@ -75,18 +77,20 @@
       "ticker": "CRCL",
       "label_note": "公开数据用 CRCL（Circle Internet Group）",
       "type": "equity",
-      "price": 86.30,
-      "price_display": "$86.30",
+      "price": 86.3,
       "change_pct": -11.41,
       "change_window": "day",
       "drawdown_pct": -45.88,
       "drawdown_basis": "52w high",
       "high_ref": 159.47,
-      "status": "重点研究",
-      "note": "昨收大跌且距52周高约-46%，深度打折候选。",
       "source": "Yahoo Finance chart (last close 2026-09-15)",
-      "as_of_session": "2026-09-15 US close",
-      "gaps": ["美股休市后为昨收；实时盘中价未刷新"]
+      "as_of_session": "2026-09-15 US close / 盘前",
+      "gaps": [
+        "美股常规时段 09:30 ET 开盘；当前为昨收/盘前价"
+      ],
+      "status": "重点研究",
+      "note": "昨收大跌且距52周高约-46%，深度打折候选；美股盘前/昨收。",
+      "price_display": "$86.30"
     },
     {
       "id": "QQQ",
@@ -94,21 +98,24 @@
       "ticker": "QQQ",
       "type": "etf",
       "price": 704.54,
-      "price_display": "$704.54",
       "change_pct": -0.65,
       "change_window": "day",
       "drawdown_pct": -5.89,
       "drawdown_basis": "52w high",
       "high_ref": 748.65,
-      "status": "正常",
-      "note": "距52周高约-6%，日内波动有限。",
       "source": "Yahoo Finance chart (last close 2026-09-15)",
-      "as_of_session": "2026-09-15 US close",
-      "gaps": ["美股休市后为昨收；实时盘中价未刷新"]
+      "as_of_session": "2026-09-15 US close / 盘前",
+      "gaps": [
+        "美股常规时段 09:30 ET 开盘；当前为昨收/盘前价"
+      ],
+      "status": "正常",
+      "note": "距52周高约-6%，波动有限；美股盘前/昨收。",
+      "price_display": "$704.54"
     }
   ],
   "data_gaps": [
-    "CRCL/QQQ 为 2026-09-15 美股收盘价（当前为亚盘时段）",
+    "CRCL/QQQ 为 2026-09-15 美股收盘价（此刻约 09:10 ET，常规盘前）",
+    "ETH 30d高取自 Yahoo ETH-USD（CoinGecko 限流）",
     "Fear&Greed 仅覆盖整体加密市场，非个股"
   ],
   "schedule_note": "下次扫描计划：北京时间 09:00 / 21:00；仅质量池；与 meme 策略分离"
