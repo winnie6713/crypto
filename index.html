@@ -9,247 +9,92 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root, [data-theme="light"] {
-    --bg: #f4f6fa;
-    --bg2: #eef2f7;
-    --card: rgba(255,255,255,0.92);
-    --stroke: rgba(15, 23, 42, 0.08);
-    --stroke2: rgba(15, 23, 42, 0.14);
-    --text: #0f172a;
-    --muted: #64748b;
-    --green: #059669;
-    --red: #e11d48;
-    --amber: #d97706;
-    --blue: #2563eb;
-    --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-    --chip-bg: rgba(15, 23, 42, 0.03);
-    --hero-glow1: rgba(37,99,235,0.12);
-    --hero-glow2: rgba(14,165,233,0.10);
-    --pill-bg: rgba(217,119,6,0.08);
-    --pill-border: rgba(217,119,6,0.28);
-    --toggle-bg: #fff;
+    --bg: #f4f6fa; --bg2: #eef2f7; --card: rgba(255,255,255,0.92);
+    --stroke: rgba(15, 23, 42, 0.08); --stroke2: rgba(15, 23, 42, 0.14);
+    --text: #0f172a; --muted: #64748b; --green: #059669; --red: #e11d48;
+    --amber: #d97706; --blue: #2563eb; --shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+    --chip-bg: rgba(15, 23, 42, 0.03); --hero-glow1: rgba(37,99,235,0.12);
+    --hero-glow2: rgba(14,165,233,0.10); --pill-bg: rgba(217,119,6,0.08);
+    --pill-border: rgba(217,119,6,0.28); --toggle-bg: #fff; --article: #111827;
   }
   [data-theme="dark"] {
-    --bg: #07090d;
-    --bg2: #0d1219;
-    --card: rgba(18, 24, 34, 0.88);
-    --stroke: rgba(255,255,255,0.08);
-    --stroke2: rgba(255,255,255,0.14);
-    --text: #f3f6fb;
-    --muted: #8b97ab;
-    --green: #3ecf8e;
-    --red: #ff6b81;
-    --amber: #f0b429;
-    --blue: #6ea8ff;
-    --shadow: 0 20px 50px rgba(0,0,0,0.35);
-    --chip-bg: rgba(255,255,255,0.03);
-    --hero-glow1: rgba(110,168,255,0.16);
-    --hero-glow2: rgba(167,139,250,0.12);
-    --pill-bg: rgba(240,180,41,0.08);
-    --pill-border: rgba(240,180,41,0.35);
-    --toggle-bg: rgba(18,24,34,0.9);
+    --bg: #07090d; --bg2: #0d1219; --card: rgba(18, 24, 34, 0.88);
+    --stroke: rgba(255,255,255,0.08); --stroke2: rgba(255,255,255,0.14);
+    --text: #f3f6fb; --muted: #8b97ab; --green: #3ecf8e; --red: #ff6b81;
+    --amber: #f0b429; --blue: #6ea8ff; --shadow: 0 20px 50px rgba(0,0,0,0.35);
+    --chip-bg: rgba(255,255,255,0.03); --hero-glow1: rgba(110,168,255,0.16);
+    --hero-glow2: rgba(167,139,250,0.12); --pill-bg: rgba(240,180,41,0.08);
+    --pill-border: rgba(240,180,41,0.35); --toggle-bg: rgba(18,24,34,0.9); --article: #e8eef7;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    min-height: 100vh;
-    color: var(--text);
+    margin: 0; min-height: 100vh; color: var(--text);
     font-family: "IBM Plex Sans SC", "IBM Plex Sans", "PingFang SC", system-ui, sans-serif;
     background:
       radial-gradient(900px 500px at 85% -10%, var(--hero-glow1), transparent 55%),
       radial-gradient(700px 420px at -10% 20%, var(--hero-glow2), transparent 50%),
       linear-gradient(180deg, var(--bg2), var(--bg));
-    transition: background .25s ease, color .25s ease;
   }
-  .wrap {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 28px 20px 48px;
-  }
-  .topbar {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 8px;
-  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 20px 48px; }
+  .topbar { display:flex; justify-content:flex-end; margin-bottom:8px; }
   .theme-toggle {
-    appearance: none;
-    border: 1px solid var(--stroke2);
-    background: var(--toggle-bg);
-    color: var(--text);
-    border-radius: 999px;
-    padding: 8px 14px;
-    font: inherit;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: var(--shadow);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    appearance:none; border:1px solid var(--stroke2); background:var(--toggle-bg); color:var(--text);
+    border-radius:999px; padding:8px 14px; font:inherit; font-size:0.85rem; font-weight:600; cursor:pointer; box-shadow:var(--shadow);
   }
-  .theme-toggle:hover { border-color: var(--blue); }
-  .theme-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: flex-end;
-    margin-bottom: 22px;
-    flex-wrap: wrap;
-  }
-  .kicker {
-    color: var(--blue);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  h1 {
-    margin: 0;
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-  .subhead {
-    margin-top: 8px;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-  .pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 12px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--pill-border);
-    background: var(--pill-bg);
-    color: var(--amber);
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  .hero-right {
-    text-align: right;
-    color: var(--muted);
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-  .summary {
-    display: grid;
-    grid-template-columns: 1.4fr repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 18px;
-  }
-  .stat {
-    position: relative;
-    overflow: hidden;
-    background: var(--card);
-    border: 1px solid var(--stroke);
-    border-radius: 18px;
-    padding: 16px 18px;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
-  }
-  .stat .label { color: var(--muted); font-size: 0.78rem; margin-bottom: 6px; }
-  .stat .value { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.02em; }
-  .stat .hint { margin-top: 4px; color: var(--muted); font-size: 0.78rem; }
-  .fg { color: var(--amber); }
-  .c-focus { color: var(--red); }
-  .c-watch { color: var(--amber); }
-  .c-ok { color: var(--green); }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--stroke);
-    border-radius: 20px;
-    padding: 18px 18px 16px;
-    box-shadow: var(--shadow);
-    transition: transform .18s ease, border-color .18s ease, background .25s ease;
-  }
-  .card:hover { transform: translateY(-2px); border-color: var(--stroke2); }
+  .hero { display:flex; justify-content:space-between; gap:20px; align-items:flex-end; margin-bottom:22px; flex-wrap:wrap; }
+  .kicker { color:var(--blue); font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:8px; }
+  h1 { margin:0; font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:700; letter-spacing:-0.02em; }
+  h2 { margin:0 0 10px; font-size:1.25rem; letter-spacing:-0.02em; }
+  .subhead { margin-top:8px; color:var(--muted); font-size:0.95rem; }
+  .pill { display:inline-flex; margin-top:12px; padding:6px 12px; border-radius:999px; border:1px solid var(--pill-border); background:var(--pill-bg); color:var(--amber); font-size:0.8rem; font-weight:600; }
+  .hero-right { text-align:right; color:var(--muted); font-size:0.85rem; line-height:1.6; }
+  .summary { display:grid; grid-template-columns:1.4fr repeat(3,1fr); gap:12px; margin-bottom:18px; }
+  .stat { background:var(--card); border:1px solid var(--stroke); border-radius:18px; padding:16px 18px; box-shadow:var(--shadow); }
+  .stat .label { color:var(--muted); font-size:0.78rem; margin-bottom:6px; }
+  .stat .value { font-size:1.45rem; font-weight:700; }
+  .stat .hint { margin-top:4px; color:var(--muted); font-size:0.78rem; }
+  .fg,.c-watch { color:var(--amber); } .c-focus { color:var(--red); } .c-ok { color:var(--green); }
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .card,.research,.step3,.legend { background:var(--card); border:1px solid var(--stroke); border-radius:20px; box-shadow:var(--shadow); }
+  .card { padding:18px; }
+  .card:hover { transform:translateY(-2px); border-color:var(--stroke2); }
   .card.status-focus { border-color: color-mix(in srgb, var(--red) 40%, transparent); }
   .card.status-watch { border-color: color-mix(in srgb, var(--amber) 35%, transparent); }
-  .card-top { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
-  .sym { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
-  .sym-sub { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
-  .tag {
-    display:inline-flex; align-items:center;
-    padding: 5px 10px; border-radius: 999px;
-    font-size: 0.75rem; font-weight: 700; white-space: nowrap;
-  }
-  .tag-ok { background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green); border: 1px solid color-mix(in srgb, var(--green) 30%, transparent); }
-  .tag-watch { background: color-mix(in srgb, var(--amber) 12%, transparent); color: var(--amber); border: 1px solid color-mix(in srgb, var(--amber) 30%, transparent); }
-  .tag-focus { background: color-mix(in srgb, var(--red) 12%, transparent); color: var(--red); border: 1px solid color-mix(in srgb, var(--red) 35%, transparent); }
-  .price {
-    margin: 14px 0 12px;
-    font-size: 1.85rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    font-variant-numeric: tabular-nums;
-  }
-  .metrics {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 12px;
-    border-radius: 14px;
-    background: var(--chip-bg);
-    border: 1px solid var(--stroke);
-  }
-  .m-label { color: var(--muted); font-size: 0.72rem; margin-bottom: 4px; }
-  .m-val { font-weight: 700; font-variant-numeric: tabular-nums; }
-  .win { color: var(--muted); font-weight: 500; font-size: 0.72rem; }
-  .up { color: var(--green); }
-  .down { color: var(--red); }
-  .flat { color: var(--muted); }
-  .note {
-    margin: 12px 0 0;
-    color: var(--muted);
-    font-size: 0.88rem;
-    line-height: 1.5;
-  }
-  .legend {
-    margin-top: 16px;
-    padding: 14px 16px;
-    border-radius: 16px;
-    border: 1px solid var(--stroke);
-    background: var(--card);
-    color: var(--muted);
-    font-size: 0.82rem;
-    line-height: 1.55;
-    box-shadow: var(--shadow);
-  }
-  .legend strong { color: var(--text); font-weight: 600; }
-  .legend code {
-    font-family: inherit;
-    color: var(--blue);
-    background: color-mix(in srgb, var(--blue) 10%, transparent);
-    border: 1px solid color-mix(in srgb, var(--blue) 20%, transparent);
-    padding: 1px 7px;
-    border-radius: 999px;
-    font-size: 0.78rem;
-  }
-  footer {
-    margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    color: var(--muted);
-    font-size: 0.8rem;
-  }
-  @media (max-width: 900px) {
-    .summary { grid-template-columns: 1fr 1fr; }
-    .grid { grid-template-columns: 1fr; }
-    .hero-right { text-align: left; }
-  }
-  @media (max-width: 560px) {
-    .summary { grid-template-columns: 1fr; }
-    .wrap { padding: 20px 14px 36px; }
+  .card-top,.research-head { display:flex; justify-content:space-between; gap:12px; align-items:flex-start; }
+  .sym { font-size:1.15rem; font-weight:700; }
+  .sym-sub { color:var(--muted); font-size:0.8rem; margin-top:2px; }
+  .tag { display:inline-flex; padding:5px 10px; border-radius:999px; font-size:0.75rem; font-weight:700; }
+  .tag-ok { background:color-mix(in srgb, var(--green) 12%, transparent); color:var(--green); border:1px solid color-mix(in srgb, var(--green) 30%, transparent); }
+  .tag-watch { background:color-mix(in srgb, var(--amber) 12%, transparent); color:var(--amber); border:1px solid color-mix(in srgb, var(--amber) 30%, transparent); }
+  .tag-focus { background:color-mix(in srgb, var(--red) 12%, transparent); color:var(--red); border:1px solid color-mix(in srgb, var(--red) 35%, transparent); }
+  .price { margin:14px 0 12px; font-size:1.85rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .metrics { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:12px; border-radius:14px; background:var(--chip-bg); border:1px solid var(--stroke); }
+  .m-label { color:var(--muted); font-size:0.72rem; margin-bottom:4px; font-weight:600; }
+  .m-val { font-weight:700; font-variant-numeric:tabular-nums; }
+  .win { color:var(--muted); font-weight:500; font-size:0.72rem; }
+  .up { color:var(--green); } .down { color:var(--red); } .flat { color:var(--muted); }
+  .note { margin:12px 0 0; color:var(--muted); font-size:0.88rem; line-height:1.55; }
+  .section-title { margin:28px 0 12px; font-size:1.05rem; font-weight:700; }
+  .step3 { padding:22px 22px 18px; margin-bottom:14px; }
+  .step3 p { color:var(--article); line-height:1.7; margin:0 0 12px; font-size:0.98rem; }
+  .step3 .q { margin:8px 0; color:var(--article); line-height:1.6; }
+  .step3 .muted { color:var(--muted); }
+  .research { padding:18px; margin-bottom:12px; }
+  .two,.four { display:grid; gap:10px; margin-top:12px; }
+  .two { grid-template-columns:1fr 1fr; }
+  .four { grid-template-columns:repeat(2,1fr); }
+  .box { background:var(--chip-bg); border:1px solid var(--stroke); border-radius:14px; padding:12px; }
+  .box p { margin:0; color:var(--text); font-size:0.9rem; line-height:1.55; }
+  .box.bull { border-color: color-mix(in srgb, var(--green) 28%, transparent); }
+  .box.bear { border-color: color-mix(in srgb, var(--red) 28%, transparent); }
+  .legend { margin-top:16px; padding:14px 16px; color:var(--muted); font-size:0.82rem; line-height:1.55; }
+  .legend strong { color:var(--text); }
+  .legend code { font-family:inherit; color:var(--blue); background:color-mix(in srgb, var(--blue) 10%, transparent); border:1px solid color-mix(in srgb, var(--blue) 20%, transparent); padding:1px 7px; border-radius:999px; font-size:0.78rem; }
+  footer { margin-top:16px; display:flex; flex-wrap:wrap; gap:8px 16px; color:var(--muted); font-size:0.8rem; }
+  .empty { color:var(--muted); }
+  @media (max-width:900px) {
+    .summary,.grid,.two,.four { grid-template-columns:1fr; }
+    .hero-right { text-align:left; }
   }
 </style>
 <script>
@@ -277,7 +122,6 @@
   })();
 </script>
 </head>
-
 <body>
   <div class="wrap">
     <div class="topbar">
@@ -297,30 +141,13 @@
     </header>
 
     <section class="summary" aria-label="市场摘要">
-      <div class="stat">
-        <div class="label">加密恐贪指数</div>
-        <div class="value fg">51 · 中性</div>
-        <div class="hint">Alternative.me</div>
-      </div>
-      <div class="stat">
-        <div class="label">重点研究</div>
-        <div class="value c-focus">1</div>
-        <div class="hint">深度回撤候选</div>
-      </div>
-      <div class="stat">
-        <div class="label">观察</div>
-        <div class="value c-watch">2</div>
-        <div class="hint">短线承压</div>
-      </div>
-      <div class="stat">
-        <div class="label">正常</div>
-        <div class="value c-ok">2</div>
-        <div class="hint">未触发压力</div>
-      </div>
+      <div class="stat"><div class="label">加密恐贪指数</div><div class="value fg">51 · 中性</div><div class="hint">Alternative.me</div></div>
+      <div class="stat"><div class="label">重点研究</div><div class="value c-focus">1</div><div class="hint">深度回撤候选</div></div>
+      <div class="stat"><div class="label">观察</div><div class="value c-watch">2</div><div class="hint">短线承压</div></div>
+      <div class="stat"><div class="label">正常</div><div class="value c-ok">2</div><div class="hint">未触发压力</div></div>
     </section>
 
     <section class="grid" aria-label="标的卡片">
-      
       <article class="card status-ok">
         <div class="card-top">
           <div>
@@ -425,18 +252,86 @@
           </div>
         </div>
         <p class="note">距52周高约-6%，波动有限；美股盘前/昨收。</p>
-      </article>
+      </article></section>
+
+    <div class="section-title">第三步 · 筹码值不值得拿</div>
+    <section class="step3">
+      <h2>第三步：出现恐慌，再检查筹码值不值得拿</h2>
+      <p>这是最重要的一步。</p><p>恐慌意味着有人急着卖，但接下来要判断：他们为什么卖？原来的投资逻辑还在不在？</p><p>对每个候选，同时给出买入理由和最强的反对理由，然后回答四个问题：</p>
+      <div class="q"><strong>Upside</strong>：判断对了，有多少上涨空间？</div><div class="q"><strong>Downside</strong>：判断错了，可能亏多少？</div><div class="q"><strong>Time</strong>：逻辑兑现可能需要等多久？</div><div class="q"><strong>Volatility</strong>：等待过程中，我需要承受多大波动？</div>
+      <p class="muted">尤其在 Crypto，项目有收入，不代表 Token 有收益；价格比高点跌了很多，也不代表便宜。</p>
+      <p><strong>只有把质量、价格和风险一起看，才有机会判断这是不是自己想找的「带血筹码」。</strong></p>
+      <p class="muted">以下为研究卡片模板与当前启发式填写，非投资建议；无依据不编目标价或概率。</p>
     </section>
+
+    
+    <article class="research">
+      <div class="research-head">
+        <div>
+          <div class="sym">ETH</div>
+          <div class="sym-sub">四问研究卡 · 观察</div>
+        </div>
+        <span class="tag tag-watch">观察</span>
+      </div>
+      <div class="two">
+        <div class="box bull"><div class="m-label">买入理由</div><p>作为智能合约主链资产，生态使用仍在；中等回撤时适合进入观察，而非追热点。</p></div>
+        <div class="box bear"><div class="m-label">最强反对理由</div><p>费率/竞争链分流、宏观风险偏好下降时，ETH 弹性可能放大下行。</p></div>
+      </div>
+      <div class="four">
+        <div class="box"><div class="m-label">Upside</div><p>若风险偏好回暖，反弹弹性往往高于BTC；仍不编具体目标价。</p></div>
+        <div class="box"><div class="m-label">Downside</div><p>若宏观或生态叙事恶化，可能跌破近期区间；需预设可承受回撤。</p></div>
+        <div class="box"><div class="m-label">Time</div><p>加密周期兑现常以周到月计，不是日线交易信号。</p></div>
+        <div class="box"><div class="m-label">Volatility</div><p>明显高于美股宽基；等待期需能扛大幅日内波动。</p></div>
+      </div>
+      <p class="note"><strong>冲击还是基本面：</strong>当前更像风险偏好回落下的价格压力，需持续核对链上与宏观，不单看跌幅。</p>
+    </article>
+    <article class="research">
+      <div class="research-head">
+        <div>
+          <div class="sym">HYPE</div>
+          <div class="sym-sub">四问研究卡 · 观察</div>
+        </div>
+        <span class="tag tag-watch">观察</span>
+      </div>
+      <div class="two">
+        <div class="box bull"><div class="m-label">买入理由</div><p>若产品仍有真实交易需求与份额，回撤可进入研究池。</p></div>
+        <div class="box bear"><div class="m-label">最强反对理由</div><p>Token 与协议收入未必对齐；叙事退潮时回撤可能更深。</p></div>
+      </div>
+      <div class="four">
+        <div class="box"><div class="m-label">Upside</div><p>叙事修复时弹性可能很大，但也意味着错误代价更大。</p></div>
+        <div class="box"><div class="m-label">Downside</div><p>高波动标的，判断错可能快速亏掉较大比例。</p></div>
+        <div class="box"><div class="m-label">Time</div><p>催化多为产品进展/市场热度，时间不确定。</p></div>
+        <div class="box"><div class="m-label">Volatility</div><p>显著高于 BTC/ETH，等待成本高。</p></div>
+      </div>
+      <p class="note"><strong>冲击还是基本面：</strong>先分清是板块普跌还是项目自身问题，再谈是否「带血」。</p>
+    </article>
+    <article class="research">
+      <div class="research-head">
+        <div>
+          <div class="sym">CIRCLE → CRCL</div>
+          <div class="sym-sub">四问研究卡 · 重点研究</div>
+        </div>
+        <span class="tag tag-focus">重点研究</span>
+      </div>
+      <div class="two">
+        <div class="box bull"><div class="m-label">买入理由</div><p>稳定币发行人叙事与合规牌照仍在；相对 52 周高点回撤深，若基本面未坏，价格可能已反映较大悲观。</p></div>
+        <div class="box bear"><div class="m-label">最强反对理由</div><p>股权波动大、新上市公司定价不稳定；大跌可能对应基本面/监管/竞争担忧，而非单纯错杀。</p></div>
+      </div>
+      <div class="four">
+        <div class="box"><div class="m-label">Upside</div><p>若情绪修复且业务增长兑现，存在估值修复空间；具体幅度需对照财报与同业，不编目标价。</p></div>
+        <div class="box"><div class="m-label">Downside</div><p>若增长不及预期或风险事件延续，可能继续下探；仓位需按个人风险预算设硬止损边界。</p></div>
+        <div class="box"><div class="m-label">Time</div><p>股权催化常按财报季/监管进展计，可能数周到数个季度。</p></div>
+        <div class="box"><div class="m-label">Volatility</div><p>新上市科技/金融相关股波动通常显著高于 QQQ；等待期回撤可能再次放大。</p></div>
+      </div>
+      <p class="note"><strong>冲击还是基本面：</strong>待核：是短期冲击还是基本面恶化（需对照最新公告与财报，本卡不替代人工核查）。</p>
+    </article>
 
     <div class="legend">
       <strong>图例</strong>：
       <code>重点研究</code> 回撤 ≤ −25% 或 日/24h ≤ −10%；
       <code>观察</code> 回撤 ≤ −10% 或 涨跌 ≤ −3%；
       <code>正常</code> 其余。
-      恐贪 ≤ 25 时整体倾向上调观察/重点研究。
-      CRCL / QQQ 若处亚盘，可能为美股昨收。
     </div>
-
     <footer>
       <span>下次扫描：北京时间 09:00 / 21:00</span>
       <span>仅质量池</span>
