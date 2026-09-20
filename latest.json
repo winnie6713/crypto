@@ -1,21 +1,21 @@
 {
   "panel": "带血筹码监测面板",
-  "updated_at": "2026-09-16T22:18+07:00",
-  "updated_at_label": "2026-09-16 22:18 ICT (UTC+7) / 15:18 UTC",
+  "updated_at": "2026-09-20T20:06+07:00",
+  "updated_at_label": "2026-09-20 20:06 ICT (UTC+7) / 13:06 UTC",
   "disclaimer": "研究提醒非投资建议",
   "fear_greed": {
-    "value": 51,
-    "classification": "Neutral",
-    "classification_zh": "中性",
+    "value": 71,
+    "classification": "Greed",
+    "classification_zh": "贪婪",
     "source": "Alternative.me",
-    "as_of": "2026-09-16"
+    "as_of": "2026-09-20"
   },
   "status_rules_note": "规则启发式 not signals：回撤≤-25% 或 日/24h涨跌≤-10% → 重点研究；回撤≤-10% 或 涨跌≤-3% → 观察；否则 正常。极端恐惧(≤25)时整体倾向观察/重点研究。",
   "summary": {
     "重点研究": 1,
-    "观察": 1,
-    "正常": 3,
-    "打折": 2
+    "观察": 0,
+    "正常": 4,
+    "打折": 1
   },
   "assets": [
     {
@@ -23,54 +23,52 @@
       "name_zh": "比特币",
       "ticker": "BTC",
       "type": "crypto",
-      "price": 75666,
-      "change_pct": -0.39,
+      "price": 80511.31,
+      "change_pct": -1.0,
       "change_window": "24h",
-      "drawdown_pct": -7.42,
+      "drawdown_pct": -2.17,
       "drawdown_basis": "≈30d high",
-      "high_ref": 81731,
-      "source": "CoinGecko markets + market_chart 30d",
+      "high_ref": 82300.0,
+      "source": "Coinbase Exchange ticker/stats + Binance Vision 30d klines",
       "gaps": [],
       "note_tpl": null,
-      "price_display": "$75,666",
+      "price_display": "$80,511",
       "status": "正常",
-      "note": "距30日高约-7%，回撤温和；恐贪中性。"
+      "note": "距30日高约-2.2%，24h约-1.00%；恐贪贪婪，未触发观察。"
     },
     {
       "id": "ETH",
       "name_zh": "以太坊",
       "ticker": "ETH",
       "type": "crypto",
-      "price": 2390.92,
-      "change_pct": -0.92,
+      "price": 2581.51,
+      "change_pct": -2.14,
       "change_window": "24h",
-      "drawdown_pct": -8.97,
+      "drawdown_pct": -3.24,
       "drawdown_basis": "≈30d high",
-      "high_ref": 2626.56,
-      "source": "CoinGecko markets + market_chart 30d",
+      "high_ref": 2668.0,
+      "source": "Coinbase Exchange ticker/stats + Binance Vision 30d klines",
       "gaps": [],
-      "price_display": "$2,391",
+      "price_display": "$2,582",
       "status": "正常",
-      "note": "回撤约-9.0%、24h约-0.92%，未触发观察阈值，状态正常。"
+      "note": "回撤约-3.2%、24h约-2.14%，未触发观察阈值，状态正常。"
     },
     {
       "id": "HYPE",
       "name_zh": "Hyperliquid",
       "ticker": "HYPE",
       "type": "crypto",
-      "price": 78.37,
-      "change_pct": 1.38,
+      "price": 91.28,
+      "change_pct": -1.38,
       "change_window": "24h",
-      "drawdown_pct": -12.54,
+      "drawdown_pct": -3.51,
       "drawdown_basis": "≈30d high",
-      "high_ref": 89.6,
-      "source": "CoinGecko price/24h; Hyperliquid candles 30d high",
-      "gaps": [
-        "30d高取自 Hyperliquid 日K（CoinGecko chart 限流）"
-      ],
-      "price_display": "$78.37",
-      "status": "观察",
-      "note": "距30日高约-13%，折扣仍在，需跟踪。"
+      "high_ref": 94.599,
+      "source": "Hyperliquid markPx/prevDayPx + candleSnapshot 30d",
+      "gaps": [],
+      "price_display": "$91.28",
+      "status": "正常",
+      "note": "较前期回升后距30日高约-3.5%，24h约-1.38%，压力缓和，状态正常。"
     },
     {
       "id": "CIRCLE",
@@ -78,45 +76,45 @@
       "ticker": "CRCL",
       "label_note": "公开数据用 CRCL（Circle Internet Group）",
       "type": "equity",
-      "price": 81.03,
-      "change_pct": -6.11,
+      "price": 91.78,
+      "change_pct": 7.86,
       "change_window": "day",
-      "drawdown_pct": -49.19,
+      "drawdown_pct": -42.45,
       "drawdown_basis": "52w high",
       "high_ref": 159.47,
-      "source": "Nasdaq quote API (real-time session)",
-      "as_of_session": "2026-09-16 US regular session (~11:17 ET)",
+      "source": "Nasdaq quote API (last sale)",
+      "as_of_session": "2026-09-17 US session close (weekend; market closed)",
       "gaps": [
-        "美股常规时段中；报价为 Nasdaq 实时 last sale"
+        "周末休市；报价为 2026-09-17 美股收盘 last sale"
       ],
-      "price_display": "$81.03",
+      "price_display": "$91.78",
       "status": "重点研究",
-      "note": "盘中跌约6.1%且距52周高约-49%，深度打折候选；美股盘中实时。"
+      "note": "上周五收涨约+7.86%，但距52周高仍约-42.4%，深度打折候选仍在；周末休市。"
     },
     {
       "id": "QQQ",
       "name_zh": "纳指100 ETF",
       "ticker": "QQQ",
       "type": "etf",
-      "price": 710.71,
-      "change_pct": 0.88,
+      "price": 721.45,
+      "change_pct": 0.63,
       "change_window": "day",
-      "drawdown_pct": -5.07,
+      "drawdown_pct": -3.63,
       "drawdown_basis": "52w high",
       "high_ref": 748.65,
-      "source": "Nasdaq quote/summary API (real-time session)",
-      "as_of_session": "2026-09-16 US regular session (~11:17 ET)",
+      "source": "Nasdaq quote API (last sale)",
+      "as_of_session": "2026-09-17 US session close (weekend; market closed)",
       "gaps": [
-        "美股常规时段中；报价为 Nasdaq 实时 last sale"
+        "周末休市；报价为 2026-09-17 美股收盘 last sale"
       ],
-      "price_display": "$710.71",
+      "price_display": "$721.45",
       "status": "正常",
-      "note": "盘中涨约0.88%，距52周高约-5%，波动有限；美股盘中实时。"
+      "note": "上周五收涨约+0.63%，距52周高约-3.6%，波动有限；周末休市。"
     }
   ],
   "data_gaps": [
-    "CRCL/QQQ 为 2026-09-16 美股常规时段实时价（约 11:17 ET）",
-    "HYPE 30d高取自 Hyperliquid 日K（CoinGecko chart 限流）",
+    "CRCL/QQQ 为 2026-09-17 美股收盘价（本轮为周末休市）",
+    "BTC/ETH 30d高取自 Binance Vision 日K；现价取自 Coinbase",
     "Fear&Greed 仅覆盖整体加密市场，非个股"
   ],
   "schedule_note": "下次扫描计划：北京时间 09:00 / 21:00；仅质量池；与 meme 策略分离",
@@ -151,30 +149,17 @@
   },
   "research_cards": [
     {
-      "id": "HYPE",
-      "ticker": "HYPE",
-      "title": "HYPE",
-      "status": "观察",
-      "bull": "若产品仍有真实交易需求与份额，相对30日高的折扣可进入研究池，而非追涨。",
-      "bear": "Token 与协议收入未必对齐；叙事退潮或竞争加剧时，回撤可能继续加深。",
-      "upside": "叙事或份额修复时弹性可能很大，但也意味着错误代价更大；不编目标价。",
-      "downside": "高波动标的，判断错可能快速亏掉较大比例；仓位需按风险预算设边界。",
-      "time": "催化多为产品进展/市场热度，兑现时间高度不确定。",
-      "volatility": "显著高于 BTC/ETH，等待成本高，需能承受大幅日内波动。",
-      "shock_or_fundamental": "先分清是板块普跌还是项目自身问题，再谈是否「带血」。"
-    },
-    {
       "id": "CIRCLE",
       "ticker": "CRCL",
       "title": "CIRCLE → CRCL",
       "status": "重点研究",
-      "bull": "稳定币发行人叙事与合规牌照仍在；相对52周高点回撤深，若基本面未坏，价格可能已反映较大悲观。",
-      "bear": "股权波动大、新上市公司定价不稳定；连跌可能对应基本面/监管/竞争担忧，而非单纯错杀。",
-      "upside": "若情绪修复且业务增长兑现，存在估值修复空间；具体幅度需对照财报与同业，不编目标价。",
-      "downside": "若增长不及预期或风险事件延续，可能继续下探；仓位需按个人风险预算设硬止损边界。",
+      "bull": "稳定币发行人叙事与合规牌照框架仍在；相对52周高点回撤仍深，若业务与储备逻辑未坏，价格可能已计入较大悲观；上周五反弹说明抛压并非单向。",
+      "bear": "新上市股权定价不稳定；深度回撤也可能对应增长/监管/竞争担忧，而非单纯错杀；单日反弹不能证伪下行风险。",
+      "upside": "若情绪与财报预期修复，存在估值修复空间；幅度需对照财报与同业，不编目标价。",
+      "downside": "若增长不及预期或风险事件延续，可能再次下探；仓位需按个人风险预算设硬边界。",
       "time": "股权催化常按财报季/监管进展计，可能数周到数个季度。",
-      "volatility": "新上市科技/金融相关股波动通常显著高于 QQQ；等待期回撤可能再次放大。",
-      "shock_or_fundamental": "待核：是短期冲击还是基本面恶化（需对照最新公告与财报，本卡不替代人工核查）。"
+      "volatility": "新上市相关股波动通常显著高于 QQQ；等待期回撤可能再次放大。",
+      "shock_or_fundamental": "待核：反弹是情绪修复还是基本面确认（需对照最新公告与财报，本卡不替代人工核查）。"
     }
   ]
 }
