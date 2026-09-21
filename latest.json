@@ -1,14 +1,14 @@
 {
   "panel": "带血筹码监测面板",
-  "updated_at": "2026-09-20T20:06+07:00",
-  "updated_at_label": "2026-09-20 20:06 ICT (UTC+7) / 13:06 UTC",
+  "updated_at": "2026-09-21T08:06+07:00",
+  "updated_at_label": "2026-09-21 08:06 ICT (UTC+7) / 01:06 UTC",
   "disclaimer": "研究提醒非投资建议",
   "fear_greed": {
-    "value": 71,
+    "value": 70,
     "classification": "Greed",
     "classification_zh": "贪婪",
     "source": "Alternative.me",
-    "as_of": "2026-09-20"
+    "as_of": "2026-09-21"
   },
   "status_rules_note": "规则启发式 not signals：回撤≤-25% 或 日/24h涨跌≤-10% → 重点研究；回撤≤-10% 或 涨跌≤-3% → 观察；否则 正常。极端恐惧(≤25)时整体倾向观察/重点研究。",
   "summary": {
@@ -23,52 +23,51 @@
       "name_zh": "比特币",
       "ticker": "BTC",
       "type": "crypto",
-      "price": 80511.31,
-      "change_pct": -1.0,
+      "price": 81603.77,
+      "change_pct": 0.66,
       "change_window": "24h",
-      "drawdown_pct": -2.17,
+      "drawdown_pct": -0.83,
       "drawdown_basis": "≈30d high",
-      "high_ref": 82300.0,
-      "source": "Coinbase Exchange ticker/stats + Binance Vision 30d klines",
+      "high_ref": 82283.0,
+      "source": "Coinbase Exchange ticker/stats + Coinbase 30d candles",
       "gaps": [],
-      "note_tpl": null,
-      "price_display": "$80,511",
+      "price_display": "$81,604",
       "status": "正常",
-      "note": "距30日高约-2.2%，24h约-1.00%；恐贪贪婪，未触发观察。"
+      "note": "距30日高约-0.8%，24h约+0.66%；恐贪贪婪，未触发观察。"
     },
     {
       "id": "ETH",
       "name_zh": "以太坊",
       "ticker": "ETH",
       "type": "crypto",
-      "price": 2581.51,
-      "change_pct": -2.14,
+      "price": 2684.14,
+      "change_pct": 2.51,
       "change_window": "24h",
-      "drawdown_pct": -3.24,
+      "drawdown_pct": -0.83,
       "drawdown_basis": "≈30d high",
-      "high_ref": 2668.0,
-      "source": "Coinbase Exchange ticker/stats + Binance Vision 30d klines",
+      "high_ref": 2706.51,
+      "source": "Coinbase Exchange ticker/stats + Coinbase 30d candles",
       "gaps": [],
-      "price_display": "$2,582",
+      "price_display": "$2,684",
       "status": "正常",
-      "note": "回撤约-3.2%、24h约-2.14%，未触发观察阈值，状态正常。"
+      "note": "回撤约-0.8%、24h约+2.51%，未触发观察阈值，状态正常。"
     },
     {
       "id": "HYPE",
       "name_zh": "Hyperliquid",
       "ticker": "HYPE",
       "type": "crypto",
-      "price": 91.28,
-      "change_pct": -1.38,
+      "price": 94.14,
+      "change_pct": 2.25,
       "change_window": "24h",
-      "drawdown_pct": -3.51,
+      "drawdown_pct": -0.48,
       "drawdown_basis": "≈30d high",
       "high_ref": 94.599,
       "source": "Hyperliquid markPx/prevDayPx + candleSnapshot 30d",
       "gaps": [],
-      "price_display": "$91.28",
+      "price_display": "$94.14",
       "status": "正常",
-      "note": "较前期回升后距30日高约-3.5%，24h约-1.38%，压力缓和，状态正常。"
+      "note": "现价贴近30日高（约-0.5%），24h约+2.25%，动能回暖，状态正常。"
     },
     {
       "id": "CIRCLE",
@@ -82,14 +81,14 @@
       "drawdown_pct": -42.45,
       "drawdown_basis": "52w high",
       "high_ref": 159.47,
-      "source": "Nasdaq quote API (last sale)",
-      "as_of_session": "2026-09-17 US session close (weekend; market closed)",
+      "source": "Yahoo Finance chart + Nasdaq 52w range cross-check",
+      "as_of_session": "2026-09-18 US session close (Mon pre-open; last session Fri)",
       "gaps": [
-        "周末休市；报价为 2026-09-17 美股收盘 last sale"
+        "美股尚未开盘（周一早盘前）；报价为 2026-09-18 收盘"
       ],
       "price_display": "$91.78",
       "status": "重点研究",
-      "note": "上周五收涨约+7.86%，但距52周高仍约-42.4%，深度打折候选仍在；周末休市。"
+      "note": "上周五收涨约+7.86%，但距52周高仍约-42.5%，深度打折候选仍在；周一美股未开盘。"
     },
     {
       "id": "QQQ",
@@ -102,19 +101,19 @@
       "drawdown_pct": -3.63,
       "drawdown_basis": "52w high",
       "high_ref": 748.65,
-      "source": "Nasdaq quote API (last sale)",
-      "as_of_session": "2026-09-17 US session close (weekend; market closed)",
+      "source": "Yahoo Finance chart (52w high from meta)",
+      "as_of_session": "2026-09-18 US session close (Mon pre-open; last session Fri)",
       "gaps": [
-        "周末休市；报价为 2026-09-17 美股收盘 last sale"
+        "美股尚未开盘（周一早盘前）；报价为 2026-09-18 收盘"
       ],
       "price_display": "$721.45",
       "status": "正常",
-      "note": "上周五收涨约+0.63%，距52周高约-3.6%，波动有限；周末休市。"
+      "note": "上周五收涨约+0.63%，距52周高约-3.6%，波动有限；周一美股未开盘。"
     }
   ],
   "data_gaps": [
-    "CRCL/QQQ 为 2026-09-17 美股收盘价（本轮为周末休市）",
-    "BTC/ETH 30d高取自 Binance Vision 日K；现价取自 Coinbase",
+    "CRCL/QQQ 为 2026-09-18 美股收盘价（周一 ICT 早盘、美股未开盘）",
+    "BTC/ETH 30d高取自 Coinbase 日K；现价取自 Coinbase",
     "Fear&Greed 仅覆盖整体加密市场，非个股"
   ],
   "schedule_note": "下次扫描计划：北京时间 09:00 / 21:00；仅质量池；与 meme 策略分离",
