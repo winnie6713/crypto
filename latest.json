@@ -1,8 +1,8 @@
 {
   "panel": "带血筹码监测面板",
-  "generated_at": "2026-10-02T09:12:41+08:00",
-  "updated_at": "2026-10-02T08:12+07:00",
-  "updated_at_label": "2026-10-02 08:12 ICT (UTC+7) / 01:12 UTC · 北京 09:12",
+  "generated_at": "2026-10-02T21:15:01+08:00",
+  "updated_at": "2026-10-02T20:15+07:00",
+  "updated_at_label": "2026-10-02 20:15 ICT (UTC+7) / 13:15 UTC · 北京 21:15",
   "disclaimer": "研究提醒非投资建议",
   "fear_greed": {
     "value": 72,
@@ -23,9 +23,9 @@
   },
   "summary": {
     "重点研究": 1,
-    "观察": 1,
-    "正常": 3,
-    "打折": 2
+    "观察": 0,
+    "正常": 4,
+    "打折": 1
   },
   "assets": [
     {
@@ -33,79 +33,79 @@
       "name_zh": "比特币",
       "ticker": "BTC",
       "type": "crypto",
-      "price": 84664.96,
-      "change_pct": 1.44,
+      "price": 86681.27,
+      "change_pct": 3.31,
       "change_window": "24h",
-      "drawdown_pct": -3.13,
+      "drawdown_pct": -0.82,
       "drawdown_basis": "≈30d high",
       "high_ref": 87397,
       "source": "Coinbase Exchange ticker/stats + Coinbase 30d candles",
-      "price_display": "$84,665",
+      "price_display": "$86,681",
       "gaps": [],
       "rule_inputs": {
-        "ret_5d_pct": 0.24,
+        "ret_5d_pct": 2.63,
         "low_20d": 74887.5,
-        "dist_above_low_20d_pct": 13.06,
-        "ma20": 82050.75,
+        "dist_above_low_20d_pct": 15.75,
+        "ma20": 82151.59,
         "above_ma20": true,
         "still_weak": false,
         "mid_downtrend_rebound": false
       },
       "status": "正常",
-      "note": "回撤约-3.1%（≈30d high）；24h约+1.4%；约5日约+0.2%；现价在约20日均线上方（约82050.75）；距约20日低约13.1%；→ 正常。"
+      "note": "回撤约-0.8%（≈30d high）；24h约+3.3%；约5日约+2.6%；现价在约20日均线上方（约82151.59）；距约20日低约15.8%；→ 正常。"
     },
     {
       "id": "ETH",
       "name_zh": "以太坊",
       "ticker": "ETH",
       "type": "crypto",
-      "price": 2702.84,
-      "change_pct": 0.55,
+      "price": 2750.21,
+      "change_pct": 2.0,
       "change_window": "24h",
-      "drawdown_pct": -3.71,
+      "drawdown_pct": -2.03,
       "drawdown_basis": "≈30d high",
       "high_ref": 2807.1,
       "source": "Coinbase Exchange ticker/stats + Coinbase 30d candles",
-      "price_display": "$2,703",
+      "price_display": "$2,750",
       "gaps": [],
       "rule_inputs": {
-        "ret_5d_pct": 0.54,
+        "ret_5d_pct": 2.31,
         "low_20d": 2356.82,
-        "dist_above_low_20d_pct": 14.68,
-        "ma20": 2628.44,
+        "dist_above_low_20d_pct": 16.69,
+        "ma20": 2630.8,
         "above_ma20": true,
         "still_weak": false,
         "mid_downtrend_rebound": false
       },
       "status": "正常",
-      "note": "回撤约-3.7%（≈30d high）；24h约+0.6%；约5日约+0.5%；现价在约20日均线上方（约2628.44）；距约20日低约14.7%；→ 正常。"
+      "note": "回撤约-2.0%（≈30d high）；24h约+2.0%；约5日约+2.3%；现价在约20日均线上方（约2630.80）；距约20日低约16.7%；→ 正常。"
     },
     {
       "id": "HYPE",
       "name_zh": "Hyperliquid",
       "ticker": "HYPE",
       "type": "crypto",
-      "price": 87.86,
-      "change_pct": -1.83,
+      "price": 91.25,
+      "change_pct": 2.25,
       "change_window": "24h",
-      "drawdown_pct": -10.36,
+      "drawdown_pct": -6.9,
       "drawdown_basis": "≈30d high",
       "high_ref": 98.01,
       "source": "Coinbase Exchange ticker/stats + Coinbase 30d candles",
-      "price_display": "$87.86",
+      "price_display": "$91.25",
       "gaps": [],
       "rule_inputs": {
-        "ret_5d_pct": -4.19,
+        "ret_5d_pct": -0.49,
         "low_20d": 75.11,
-        "dist_above_low_20d_pct": 16.98,
-        "ma20": 88.51,
-        "above_ma20": false,
+        "dist_above_low_20d_pct": 21.49,
+        "ma20": 88.68,
+        "above_ma20": true,
         "still_weak": true,
         "mid_downtrend_rebound": false
       },
-      "status": "观察",
-      "ma20_ref": 88.51,
-      "note": "回撤约-10.4%（≈30d high）；24h约-1.8%；约5日约-4.2%；现价在约20日均线下方（约88.51）；距约20日低约17.0%；判定仍偏弱；→ 观察。"
+      "status": "正常",
+      "ma20_ref": 88.68,
+      "note": "回撤约-6.9%（≈30d high）；24h约+2.2%；约5日约-0.5%；现价在约20日均线上方（约88.68）；距约20日低约21.5%；判定仍偏弱；→ 正常。"
     },
     {
       "id": "CIRCLE",
@@ -121,9 +121,8 @@
       "source": "Nasdaq quote/summary/historical + Yahoo 1y chart merge (Stooq SSL failed)",
       "price_display": "$82.91",
       "gaps": [
-        "Yahoo 1y chart missing 2026-10-01 bar; merged Nasdaq historical close for session",
         "Stooq SSL failed this run; used Nasdaq quote + hist + Yahoo 1y chart",
-        "US market Closed at fetch (Oct 1, 2026); panel uses last regular session close 2026-10-01"
+        "US market Pre-Market at fetch (Oct 2, 2026 9:14 AM ET); panel uses last regular session close 2026-10-01"
       ],
       "rule_inputs": {
         "ret_5d_pct": -10.85,
@@ -135,9 +134,9 @@
         "mid_downtrend_rebound": false
       },
       "status": "重点研究",
-      "as_of_session": "2026-10-01 US regular session close (fetch time: Closed)",
+      "as_of_session": "2026-10-01 US regular session close (fetch time: Pre-Market; quote ~$85.67 / +3.33%)",
       "label_note": "公开数据用 CRCL（Circle Internet Group）",
-      "note": "回撤约-48.0%（52w high）；day约+0.9%；约5日约-10.8%；现价在约20日均线下方（约90.69）；距约20日低约5.9%；判定仍偏弱；→ 重点研究；美股为 2026-10-01 US regular session close (fetch time: Closed)。"
+      "note": "回撤约-48.0%（52w high）；day约+0.9%；约5日约-10.8%；现价在约20日均线下方（约90.69）；距约20日低约5.9%；判定仍偏弱；→ 重点研究；美股为 2026-10-01 US regular session close (fetch time: Pre-Market; quote ~$85.67 / +3.33%)。"
     },
     {
       "id": "QQQ",
@@ -153,9 +152,8 @@
       "source": "Nasdaq quote/summary/historical + Yahoo 1y chart merge (Stooq SSL failed)",
       "price_display": "$742.03",
       "gaps": [
-        "Yahoo 1y chart missing 2026-10-01 bar; merged Nasdaq historical close for session",
         "Stooq SSL failed this run; used Nasdaq quote + hist + Yahoo 1y chart",
-        "US market Closed at fetch (Oct 1, 2026); panel uses last regular session close 2026-10-01"
+        "US market Pre-Market at fetch (Oct 2, 2026 9:13 AM ET); panel uses last regular session close 2026-10-01"
       ],
       "rule_inputs": {
         "ret_5d_pct": 0.13,
@@ -167,32 +165,19 @@
         "mid_downtrend_rebound": false
       },
       "status": "正常",
-      "as_of_session": "2026-10-01 US regular session close (fetch time: Closed)",
-      "note": "回撤约-0.9%（52w high）；day约+0.3%；约5日约+0.1%；现价在约20日均线上方（约726.18）；距约20日低约6.0%；→ 正常；美股为 2026-10-01 US regular session close (fetch time: Closed)。"
+      "as_of_session": "2026-10-01 US regular session close (fetch time: Pre-Market; quote ~$751.82 / +1.32%)",
+      "note": "回撤约-0.9%（52w high）；day约+0.3%；约5日约+0.1%；现价在约20日均线上方（约726.18）；距约20日低约6.0%；→ 正常；美股为 2026-10-01 US regular session close (fetch time: Pre-Market; quote ~$751.82 / +1.32%)。"
     }
   ],
   "data_gaps": [
-    "CRCL/QQQ：Stooq 本环境 SSL 失败；现价与日涨跌取自 Nasdaq 最近完整美股常规交易日收盘（2026-10-01 US regular session close (fetch time: Closed)）；约20日结构由 Yahoo 1y chart（可能缺最新交易日）与 Nasdaq historical 合并",
-    "Yahoo chart 本轮 429，复用昨日 chart 并由 Nasdaq hist 合并最新交易日；52w高与 Nasdaq summary 交叉核对",
+    "CRCL/QQQ：Stooq 本环境 SSL 失败；现价与日涨跌取自 Nasdaq（抓取时美股为 Pre-Market，面板用最近完整常规交易日收盘：2026-10-01 US regular session close (fetch time: Pre-Market; quote ~$85.67 / +3.33%)）；约20日结构由 Yahoo 1y chart 与 Nasdaq historical 合并",
+    "Yahoo 1y chart 本轮抓取成功；52w高取自 Yahoo meta，并与 Nasdaq summary 交叉核对",
     "BTC/ETH/HYPE 现价与24h取自 Coinbase ticker/stats；约30日高与约5日/20日结构取自 Coinbase 日K",
     "约5日收益、约20日低与约20日均线用日K近似（股票按交易日），供状态规则使用",
     "Fear&Greed 仅覆盖整体加密市场，非个股"
   ],
   "schedule_note": "下次扫描计划：北京时间 09:00 / 21:00；仅质量池；与 meme 策略分离",
   "research_cards": [
-    {
-      "id": "HYPE",
-      "ticker": "HYPE",
-      "title": "HYPE",
-      "status": "观察",
-      "bull": "Hyperliquid：永续DEX与链上交易量叙事。相对高点回撤约-10.4%；若下跌主要来自情绪而非业务/网络破坏，可对照公开数据核验。现价约$87.86，约20日低约75.11。",
-      "bear": "近约5日约-4.2%、约20日均线下方（约88.51），24h约-1.8%；距约20日低约17.0%。下行风险未必结束。",
-      "upside": "若情绪与基本面同步修复，存在从回撤区间修复的空间；不编目标价。",
-      "downside": "若继续跌破约20日低（约75.11）或加速下行，弱势加深；需按个人风险预算设边界。",
-      "time": "企稳或再探底常以数日到数周计；催化看宏观、监管与各自基本面节点。",
-      "volatility": "加密资产波动通常高于美股宽基；个股/主题股波动常高于 QQQ。",
-      "shock_or_fundamental": "待核：短期冲击还是基本面恶化（需对照公告与宏观/链上数据）。当前按规则为观察；仍偏弱。"
-    },
     {
       "id": "CIRCLE",
       "ticker": "CRCL",
